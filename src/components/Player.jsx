@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 export default function Player({ initialName, symbol, isActive }) {
-  const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
+  const [playerName, setPlayerName] = useState(initialName);
 
   function handleEdit() {
     // setIsEditing(!isEditing);  //bad practice! - not updating instantly
-    setIsEditing((prevState) => !prevState); //good practice!
+    setIsEditing((prevState) => !prevState); //updating isEditing state     (good practice!)
   }
 
   function handleNameChange(event) {
